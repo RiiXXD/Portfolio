@@ -1,12 +1,13 @@
-import logo from './logo.svg';
-import Navbar from "./Components/Navbar"
+import HomePage from "./Components/Homepage"
 import './App.css';
+import {  Box, Flex, Link, Text, Button, Image, Heading } from "@chakra-ui/react";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-    </div>
+    <Box>
+      
+      <HomePage/>
+    </Box>
   );
 }
 
