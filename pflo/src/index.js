@@ -4,10 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
+import '@fontsource/merriweather';
+import '@fontsource/poppins/100.css';
+import '@fontsource/poppins/200.css';
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+// Supports weights 100-900
+import '@fontsource-variable/noto-sans-tc';
+const theme = extendTheme({
+  fonts: {
+    heading: `'Noto Sans TC Variable', sans-serif;`,
+    body: ` 'Poppins', sans-serif;`,
+  },
+ 
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ChakraProvider>
+  <ChakraProvider theme={theme}>
     <App />
   </ChakraProvider>
 );
